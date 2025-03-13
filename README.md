@@ -14,3 +14,6 @@ import  = [
     "<path-to-this-repo>/conf/alacritty_hints.toml",
 ]
 ```
+
+# Debugging
+In order to debug Alacritty you can start in verbose mode `alacritty -vvv`
