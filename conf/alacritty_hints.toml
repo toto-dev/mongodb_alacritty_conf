@@ -1,0 +1,26 @@
+[[hints.enabled]]
+command = "xdg-open"
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`\\\\]+"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "O", mods = "Control|Shift" }
+
+[[hints.enabled]]
+regex = "(SERVER|BACKPORT)-\\d{1,6}"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "K", mods = "Control|Shift" }
+command = { program = "bash", args = ["/home/ael/bin/open_server_tickets.sh"] }
+
+[[hints.enabled]]
+regex = '(?:\s|@|^)(?:[\w~\/.-]+)?[\w-]+\.[a-z]+(\:\d+)?'
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "P", mods = "Control|Shift" }
+command = { program = "alacritty", args = ["-e", "bash", "/home/ael/bin/open_file_in_vim.sh"] }
